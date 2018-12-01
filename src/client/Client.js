@@ -233,6 +233,13 @@ class Client extends EventEmitter {
     }
     return emojis;
   }
+  get roles() {
+    const roles = new Collection();
+    for (const guild of this.guilds.values()) {
+      for (const role of guild.roles.values()) roles.set(role.id, role);
+    }
+    return roles;
+  }
 
   /**
    * Timestamp of the time the client was last `READY` at
