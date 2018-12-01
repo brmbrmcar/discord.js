@@ -8,7 +8,7 @@ class GuildBanAddHandler extends AbstractHandler {
     const client = this.packetManager.client;
     const data = packet.d;
     const guild = client.guilds.get(data.guild_id);
-    const user = client.users.get(data.user.id);
+    const user = data.user.id
     if (guild && user) client.emit(Constants.Events.GUILD_BAN_ADD, guild, user);
   }
 }
