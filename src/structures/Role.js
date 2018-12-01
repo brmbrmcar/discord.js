@@ -352,7 +352,6 @@ class Role {
    * @returns {string}
    */
   toString() {
-    if (this.id === this.guild.id) return '@everyone';
     return `<@&${this.id}>`;
   }
 
