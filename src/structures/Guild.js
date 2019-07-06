@@ -93,6 +93,7 @@ class Guild {
      */
     this.icon = data.icon;
 
+    this.boosted = data.premium_subscription_count > 0
     /**
      * The hash of the guild splash image (VIP only)
      * @type {?string}
